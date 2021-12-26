@@ -26,8 +26,8 @@ vector tiles from Danish Address data
 - 20 esrejendomsnr 不動産番号
 - 21 etrs89koordinat_ost ETRS89の座標 東
 - 22 etrs89koordinat_nord ETRS89の座標 北
-- 23 wgs84koordinat_bredde WGS84の座標 経度
-- 24 wgs84koordinat_laengde WGS84の座標 緯度
+- 23 wgs84koordinat_bredde WGS84の座標 緯度
+- 24 wgs84koordinat_laengde WGS84の座標 経度
 - 25 nojagtighed 精度
 - 25 kilde ソース
 - 26 tekniskstandard 技術基準
