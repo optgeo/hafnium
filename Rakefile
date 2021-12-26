@@ -1,12 +1,23 @@
 require './constants'
 
+task :download do
+  sh "mkdir src" unless File.directory?("src")
+  File.foreach('kommunekodeliste_reverse.txt') {|l|
+    kommunekode = l.split(':')[0]
+    sh <<-EOS
+curl "https://api.dataforsyningen.dk/adresser?status=1&kommunekode=#{kommunekode}&ndjson" | \
+gzip -9 > src/#{kommunekode}.ndjson.gz
+    EOS
+  }
+end
+
 task :stream do
   sh "curl #{URL}"
 end
 
 task :togeojson do
   sh <<-EOS
-rake stream | \
+cat adresser.csv | \
 ruby filter.rb | \
 uniq
   EOS

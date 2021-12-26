@@ -2,6 +2,11 @@
 vector tiles from Danish Address data
 ![social preview image](https://repository-images.githubusercontent.com/441836222/2a807d1e-cde0-4159-96b4-bd47757a0eca)
 
+# Usage
+```zsh
+rake download
+```
+
 # CSV フォーマットの解釈
 - 0 id ID
 - 1 status ステータス
@@ -86,6 +91,9 @@ vector tiles from Danish Address data
 - landsdelsnuts3
 - landsdelsnavn
 - betegnelse
+
+# kommunekodeliste
+kommunekodeliste.txt is from https://danmarksadresser.dk/adressedata/kodelister/kommunekodeliste.
 
 # About the social preview image
 It is [Moonlight, Strandgade 30](https://www.metmuseum.org/art/collection/search/441933) by Vilhelm Hammershoi, from [The MET](https://www.metmuseum.org/art/collection).
